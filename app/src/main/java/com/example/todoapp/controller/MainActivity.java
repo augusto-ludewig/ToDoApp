@@ -14,7 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.todoapp.R;
-import com.example.todoapp.model.DateModel;
+import com.example.todoapp.model.DataModel;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,11 +37,11 @@ public class MainActivity extends AppCompatActivity {
         String usuario = usuarioEditText.getText().toString();
         String senha = senhaEditText.getText().toString();
 
-        if(usuario.equals(DateModel.getInstance().userDetails.getUsuario()) &&
-        senha.equals(DateModel.getInstance().userDetails.getSenha())){
+        if(usuario.equals(DataModel.getInstance().userDetails.getUsuario()) &&
+        senha.equals(DataModel.getInstance().userDetails.getSenha())){
             goToSecondActivity();
-        } else if (usuario.equals(DateModel.getInstance().userDetails.getUsuario()) &&
-                !senha.equals(DateModel.getInstance().userDetails.getSenha())){
+        } else if (usuario.equals(DataModel.getInstance().userDetails.getUsuario()) &&
+                !senha.equals(DataModel.getInstance().userDetails.getSenha())){
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle(getString(R.string.error));
             builder.setMessage(R.string.senha_incorreta);
