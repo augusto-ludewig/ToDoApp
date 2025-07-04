@@ -25,6 +25,13 @@ public class MockData {
                 false,
                 false));
 
+        tarefas.add(new Tarefa(
+                "Fazer trabalho",
+                "Terminar o projeto da faculdade",
+                LocalDateTime.parse("2025-07-04T21:10:45.123"),
+                false,
+                false));
+
     }
 
     public static MockData getInstance(){
