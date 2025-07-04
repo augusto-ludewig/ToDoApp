@@ -57,7 +57,7 @@
                 android:layout_marginBottom="12dp" />
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBoxAtividade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/mantenha_se_logado_check_box"

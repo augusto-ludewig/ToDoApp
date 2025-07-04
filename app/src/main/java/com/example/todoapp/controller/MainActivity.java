@@ -14,7 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.todoapp.R;
-import com.example.todoapp.model.DataModel;
+import com.example.todoapp.datasource.MockData;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,17 +31,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void efetuarLogin(View v){
-
         EditText usuarioEditText = findViewById(R.id.inputUsuario);
         EditText senhaEditText = findViewById(R.id.inputSenha);
         String usuario = usuarioEditText.getText().toString();
         String senha = senhaEditText.getText().toString();
 
-        if(usuario.equals(DataModel.getInstance().userDetails.getUsuario()) &&
-        senha.equals(DataModel.getInstance().userDetails.getSenha())){
+        if(usuario.equals(MockData.getInstance().user.getUsuario()) &&
+        senha.equals(MockData.getInstance().user.getSenha())){
             goToSecondActivity();
-        } else if (usuario.equals(DataModel.getInstance().userDetails.getUsuario()) &&
-                !senha.equals(DataModel.getInstance().userDetails.getSenha())){
+        } else if (usuario.equals(MockData.getInstance().user.getUsuario()) &&
+                !senha.equals(MockData.getInstance().user.getSenha())){
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle(getString(R.string.error));
             builder.setMessage(R.string.senha_incorreta);

@@ -1,10 +1,10 @@
-package com.example.todoapp.model;
+package com.example.todoapp.model.entities;
 
-public class UserDetails {
+public class User {
     private String usuario;
     private String senha;
 
-    public UserDetails(String usuario, String senha) {
+    public User(String usuario, String senha) {
         this.usuario = usuario;
         this.senha = senha;
     }
