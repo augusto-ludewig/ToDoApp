@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/mainCadastro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEEEEE"
-    tools:context=".controller.MainActivity">
+    android:background="#EEEEEE">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardLogin"
+        android:id="@+id/cardCadastro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="32dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="32dp"
         android:background="@android:color/white">
 
         <LinearLayout
@@ -28,10 +26,10 @@
             android:padding="24dp">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textTituloCadastro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/login_title"
+                android:text="@string/tela_cadastro"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textStyle="bold"
@@ -39,52 +37,48 @@
                 android:paddingBottom="16dp" />
 
             <EditText
-                android:id="@+id/inputUsuario"
+                android:id="@+id/inputNovoUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                android:hint="@string/usuario_input"
+                android:hint="@string/input_login_novo_usuario"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp" />
 
             <EditText
-                android:id="@+id/inputSenha"
+                android:id="@+id/inputNovaSenha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/senha_input"
+                android:layout_marginBottom="12dp"
+                android:hint="@string/input_senha_novo_usuario"
                 android:inputType="textPassword"
-                android:minHeight="48dp"
-                android:layout_marginBottom="12dp" />
-
-            <CheckBox
-                android:id="@+id/checkBoxAtividade"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/mantenha_se_logado_check_box"
-                android:layout_marginBottom="16dp" />
+                android:minHeight="48dp" />
 
             <Button
-                android:id="@+id/buttonLogin"
+                android:id="@+id/buttonSalvarUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@android:color/holo_green_light"
-                android:onClick="efetuarLogin"
-                android:text="@string/login_buttom"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#8BC500"
+                android:onClick="salvarUsuario"
+                android:text="@string/cadastrar_buttom"
+                android:textAlignment="center"
                 android:textAllCaps="false"
+                android:textColor="@android:color/white"
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/buttonCadastro"
+                android:id="@+id/buttonVoltarLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:backgroundTint="#004C66"
-                android:onClick="abrirTelaCadastro"
-                android:text="@string/cadastre_se"
+                android:onClick="voltarLogin"
+                android:text="@string/voltar_ao_login"
                 android:textAllCaps="false"
+                android:textColor="@android:color/white"
                 android:textStyle="bold" />
-        </LinearLayout>
 
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

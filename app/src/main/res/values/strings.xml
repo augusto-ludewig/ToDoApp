@@ -6,11 +6,19 @@
     <string name="senha_input">Senha</string>
     <string name="usuario_input">Nome de usuário</string>
     <string name="login_buttom">LOGIN</string>
+    <string name="cadastre_se">CADASTRE-SE</string>
     <string name="mantenha_se_logado_check_box">Mantenha-se logado</string>
     <string name="error">Error</string>
     <string name="usuario_incorreto">O usuário não foi encontrado!</string>
     <string name="senha_incorreta">Senha incorreta!</string>
 
-
     <string name="title_activity_second">SecondActivity</string>
+    <string name="tela_cadastro">Cadastre-se</string>
+    <string name="input_login_novo_usuario">Novo usuário</string>
+    <string name="input_senha_novo_usuario">Nova senha</string>
+    <string name="cadastrar_buttom">CADASTRAR\n</string>
+    <string name="voltar_ao_login">VOLTAR AO LOGIN</string>
+    <string name="cancelar_edit_tarefa">CANCELAR</string>
+    <string name="salvar_edit_tarefa">SALVAR</string>
+    <string name="importante">Importante</string>
 </resources>

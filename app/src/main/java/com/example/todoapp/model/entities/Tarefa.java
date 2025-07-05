@@ -4,12 +4,23 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Tarefa {
+    private long id;
     private String titulo;
     private String descricao;
     private LocalDateTime dataInicial;
     private LocalDateTime dataDeConclusao;
     private boolean importante;
     private boolean concluida;
+
+    public Tarefa(long id, String titulo, String descricao, LocalDateTime dataDeConclusao, boolean importante, boolean concluida) {
+        this.id = id;
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.dataInicial = LocalDateTime.now();
+        this.dataDeConclusao = dataDeConclusao;
+        this.importante = importante;
+        this.concluida = concluida;
+    }
 
     public Tarefa(String titulo, String descricao, LocalDateTime dataDeConclusao, boolean importante, boolean concluida) {
         this.titulo = titulo;
@@ -18,6 +29,13 @@ public class Tarefa {
         this.dataDeConclusao = dataDeConclusao;
         this.importante = importante;
         this.concluida = concluida;
+    }
+
+    public long getid() {
+        return id;
+    }
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getTitulo() {
@@ -38,6 +56,10 @@ public class Tarefa {
 
     public LocalDateTime getDataInicial() {
         return dataInicial;
+    }
+
+    public void setDataInicial(LocalDateTime dataInicial) {
+        this.dataInicial = dataInicial;
     }
 
     public LocalDateTime getDataDeConclusao() {
